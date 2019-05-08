@@ -18,6 +18,17 @@ center: [139.757,35.670],
 zoom: 12,
 style: 'mapbox://styles/shohei0304/cjvej7b862cba1fp7fnro6sdb'
 });
+  // Navigation Control
+map.addControl(
+ new mapboxgl.NavigationControl(), 'top-left'
+);
+// Geolocation Control
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true
+  },
+  trackUserLocation: true
+}));
 </script>
   </body>
 </html>
